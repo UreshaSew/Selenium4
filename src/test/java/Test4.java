@@ -1,7 +1,7 @@
+import com.sun.org.apache.bcel.internal.generic.Select;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 
 public class Test4 {
     public static void main(String[]args){
@@ -27,14 +27,16 @@ public class Test4 {
         driver.navigate().to("https://www.testandquiz.com/selenium/testing.html");
         String sampleText = driver.findElement(By.className("col-md-12")).getText();
         System.out.println(sampleText);
-       // driver.findElement(By.linkText("This is a link")).click();
+       driver.findElement(By.linkText("This is a link")).click();
+       driver.navigate().back();
         driver.findElement(By.id("fname")).sendKeys("JavaTpoint");
-        driver.findElement(By.id("fname")).clear();
+        //driver.findElement(By.id("fname")).clear();
         driver.findElement(By.id("idOfButton")).click();
+
 
         driver.findElement(By.id("male")).click();
         driver.findElement(By.className("Automation")).click();
-       driver.findElement(By.id("testingDropdown")).click();
+        driver.findElement(By.id("testingDropdown")).click();
        // driver.findElement(By.cssSelector("input.Database")).click();
 
 
